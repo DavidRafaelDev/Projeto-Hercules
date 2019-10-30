@@ -1,8 +1,10 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+
 $conecta = mysqli_connect("localhost","id11261485_db_tcc","db_tcc","id11261485_db_tcc");
                             // Local / usuario / senha / banco
-
 $query = "SELECT * FROM tb_aluno ORDER BY nm_aluno";
 
 $result = mysqli_query($conecta,$query);

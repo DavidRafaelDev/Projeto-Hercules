@@ -13,6 +13,8 @@
         
         $user = $result->fetch_array();
         
+        header("Access-Control-Allow-Origin: *");
+        header("Access-Control-Allow-Headers: Content-Type");
         echo '{"id":'.$user['cd_adm'].',"nome":"'.$user['nm_adm'].'","email":"'.$user['ds_email'].'","senha":"'.$user['ds_senha'].'"}';
     }else{
         echo "0";

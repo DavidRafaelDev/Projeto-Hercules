@@ -20,29 +20,11 @@ $conecta = mysqli_connect("localhost","id11261485_db_tcc","db_tcc","id11261485_d
     $panturrilhadir = $_POST['panturrilhadir'];
     $quadril = $_POST['quadril'];
 
-    // $aluno = 1;
-    // $peso = 2;
-    // $altura = 3;
-    // $bracoesq = 4;
-    // $bracodir = 5;
-    // $antebracoesq = 6;
-    // $antebracodir = 7;
-    // $qt_ombro = 8;
-    // $qt_torax = 9;
-    // $qt_abdomen = 10;
-    // $qt_cintura = 11;
-    // $qt_quadril = 12;
-    // $coxaesq = 13;
-    // $coxadir = 14;
-    // $panturrilhaesq = 15;
-    // $panturrilhadir = 16;
     $query = "INSERT INTO `tb_medidas`(`id_aluno`, `qt_peso`, `qt_altura`, `qt_braco_direito`, `qt_braco_esquerdo`, `qt_antebraco_direito`, `qt_antebraco_esquerdo`, `qt_ombro`, `qt_torax`, 
     `qt_abdomen`, `qt_cintura`, `qt_quadril`, `qt_coxa_direita`, `qt_coxa_esquerda`, `qt_panturrilha_direita`, `qt_panturrilha_esquerda`) VALUES ('$aluno','$peso','$altura','$bracodir',
     '$bracoesq','$antebracodir','$antebracoesq','$qt_ombro','$qt_torax','$qt_abdomen','$qt_cintura','$qt_quadril','$coxadir','$coxaesq','$panturrilhadir','$panturrilhaesq')";
 
     
     mysqli_query($conecta,$query);
-    
- 
     
     echo "Cadastrado";
